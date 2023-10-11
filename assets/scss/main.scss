@@ -1,0 +1,16 @@
+@import "utils/normalize";
+@import "utils/colors";
+@import "utils/fonts";
+
+@import "components/comp_dropdown";
+@import "components/comp_videos-gallery";
+@import "components/nav_navbar";
+
+body {
+  font-family: "AR One Sans", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+
+  background-color: $dark-bg;
+  padding: 12px 28px;
+}
