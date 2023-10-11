@@ -22,3 +22,13 @@ window.addEventListener("click", (event) => {
     });
   }
 });
+
+//* Sidebar
+const sidebar_toggle = document.querySelector(
+  '[data-function="sidebar-toggle"]'
+);
+const sidebar = document.querySelector(".sidebar");
+
+sidebar_toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
+});

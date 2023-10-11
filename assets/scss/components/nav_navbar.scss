@@ -1,4 +1,4 @@
-$font-size: 1.75rem;
+$font-size: 1.5rem;
 nav {
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@ nav {
     flex-direction: row;
 
     .icon {
-      width: 2rem;
+      width: $font-size + 0.5rem;
       margin-right: 1rem;
       color: $dark-text-main;
     }
@@ -29,12 +29,16 @@ nav {
     left: 0;
     right: 0;
 
+    background-color: $dark-bg;
+
     padding: 8px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+
+    z-index: 1;
 
     .icon {
       padding: 8px 16px;

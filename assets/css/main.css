@@ -310,42 +310,6 @@ template {
   display: none;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #272727;
-  margin-top: 1rem;
-  padding: 12px 16px;
-  min-width: 200px;
-  max-width: 70vw;
-  z-index: 1;
-  border-radius: 12px;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-}
-.list .item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-}
-.list .item .icon {
-  width: 1.4rem;
-  margin-right: 1rem;
-}
-.list .item span {
-  font-size: 0.9rem;
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -374,15 +338,17 @@ nav .search {
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: #0f0f0f;
   padding: 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+  z-index: 1;
 }
 nav .search .icon {
   padding: 8px 16px;
-  width: 1.75rem;
+  width: 1.5rem;
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -407,7 +373,7 @@ nav .search .input input {
   border: 1px solid #3f3f3f;
   border-end-end-radius: 12px;
   border-start-end-radius: 12px;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 nav .options .profile img {
   width: 2.25rem;
@@ -421,15 +387,95 @@ nav .options .profile img {
     padding: 0;
   }
   nav .search .icon {
-    width: 1.45rem;
+    width: 1.2rem;
   }
   nav .search .input input {
     padding: 8px 16px;
     width: 50vw;
     max-width: 1000px;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
+aside {
+  margin-top: 1rem;
+  margin-left: -28px;
+  position: relative;
+}
+aside .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 1rem - 80px);
+  width: calc(100vw - 56px);
+  padding: 12px 28px;
+  padding-top: 1rem;
+  background-color: #272727;
+}
+aside .sidebar .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+aside .sidebar .list .item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+aside .sidebar .list .item .icon {
+  width: 1.75rem;
+}
+aside .sidebar .list .item .caption {
+  font-size: 1rem;
+}
+aside .sidebar.hidden {
+  left: -200%;
+}
+
+@media only screen and (min-width: 1024px) {
+  aside .sidebar {
+    height: calc(100vh - 1rem - 80px);
+    width: 280px;
+    max-width: 17.5vw;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #272727;
+  margin-top: 1rem;
+  padding: 12px 16px;
+  min-width: 200px;
+  max-width: 70vw;
+  z-index: 1;
+  border: 1px solid #aaaaaa;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+.list .item .icon {
+  width: 1.4rem;
+  margin-right: 1rem;
+}
+.list .item span {
+  font-size: 0.9rem;
+}
+
 body {
   font-family: "AR One Sans", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #0f0f0f;

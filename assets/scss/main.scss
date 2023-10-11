@@ -2,9 +2,14 @@
 @import "utils/colors";
 @import "utils/fonts";
 
+@import "components/nav_navbar";
+@import "components/nav_sidebar";
 @import "components/comp_dropdown";
 @import "components/comp_videos-gallery";
-@import "components/nav_navbar";
+
+* {
+  // outline: 1px solid red;
+}
 
 body {
   font-family: "AR One Sans", sans-serif, system-ui, -apple-system,

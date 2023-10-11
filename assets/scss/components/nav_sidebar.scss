@@ -1,0 +1,51 @@
+aside {
+  margin-top: 1rem;
+  margin-left: -28px;
+  position: relative;
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(
+      100vh - 1rem - 80px
+    ); // 52px: height of navbar; 28px: own padding
+
+    width: calc(100vw - 56px);
+    padding: 12px 28px;
+    padding-top: 1rem;
+
+    background-color: $dark-bg-accent;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        .icon {
+          width: $font-size + 0.25rem;
+        }
+        .caption {
+          font-size: $font-size - 0.5rem;
+        }
+      }
+    }
+    &.hidden {
+      left: -200%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  aside {
+    .sidebar {
+      height: calc(100vh - 1rem - 80px);
+      width: 280px;
+      max-width: 17.5vw;
+    }
+  }
+}
